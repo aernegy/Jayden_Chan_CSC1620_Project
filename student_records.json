@@ -1,0 +1,13 @@
+{
+    "ABIGAIL": {
+        "NAME": "Abigail",
+        "ID": 10101010,
+        "MATHEMATICS": 90
+    },
+
+    "JEROME": {
+        "NAME": "Jerome",
+        "ID": 293729,
+        "ENGLISH": 20
+    }
+}

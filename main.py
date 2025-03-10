@@ -1,44 +1,46 @@
-from os import system
+from view import main as view
+from clear import clear
 
 
 def main():
-    open_main = True
-
     clear()
 
-    with open("./files/Jayden_Chan_Project/CSC1620_Project/main_menu.txt") as main_menu:
-        main_menu = main_menu.read()
-        
+    main_menu_options = {"1": view, 
+                         "2": search, 
+                         "3": add, 
+                         "Q": quit}
+                         
+    with open("./files/Jayden_Chan_Project/main_menu.txt") as main_menu:
+        print(main_menu.read())
+
+        open_main = True
+
+        error_message = "Error message"
+
         while open_main:
-            print(main_menu)
             user_input = input("Choose an option: ").upper()
 
-            match user_input:
-                case "1"|"2"|"3"|"Q":
-                    open_main = False
+            if user_input in main_menu_options:
+                open_main = False
 
-                case _:
-                    clear()
-        
-    match user_input:
-        case "1":
-            clear()
-            print("Viewing")
-
-        case "2":
-            clear()
-            print("Searching")
-
-        case "3":
-            clear()
-            print("Adding")
-
-        case "Q":
-            return
+            else:
+                clear()
+                print(main_menu)
+                print(error_message)
+    
+    main_menu_options[user_input]()    
 
 
-def clear():
-    system("clear")
+def search():
+    print("Searching")
+
+
+def add():
+    print("adding")
+    
+
+def quit():
+    print("quitting")
 
 
 main()
