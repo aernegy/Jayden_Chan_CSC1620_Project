@@ -1,11 +1,14 @@
 from os import system
 
+
 def main():
     open_main = True
 
     clear()
 
-    with open("main_menu.txt", "r") as main_menu:
+    with open("./files/Jayden_Chan_Project/CSC1620_Project/main_menu.txt") as main_menu:
+        main_menu = main_menu.read()
+        
         while open_main:
             print(main_menu)
             user_input = input("Choose an option: ").upper()
