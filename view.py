@@ -8,14 +8,16 @@ from update import update
 def view():
     with (open("./files/Jayden_Chan_Project/misc/student_records.json", "r+") 
           as student_records_json):
-        
         student_records = json.load(student_records_json)
 
     list_records(student_records)
 
     open_view = True
     error = False
-    error_message = "Error message"
+    
+    with (open("./files/Jayden_Chan_Project/misc/menu_error.txt") 
+          as error_message):
+        error_message = error_message.read()
 
     while open_view:
         list_records(student_records)
@@ -30,10 +32,16 @@ def view():
             student_details(user_input, student_records)
 
         elif user_input == "A":
-            student_records = add(student_records)
+            add()
+            with (open("./files/Jayden_Chan_Project/misc/student_records.json", 
+                       "r+") as student_records_json):
+                student_records = json.load(student_records_json)
 
         elif user_input == "Q":
             open_view = False
+
+        else:
+            error = True
 
 
 def list_records(student_records):
@@ -45,12 +53,14 @@ def list_records(student_records):
         if column_1:
             print(f"{student + " - " + student_records[student]["NAME"]:50}", 
                   end="")
-            # print(student_no, "-", student_records[student]["NAME"])
             column_1 = False
 
         else:
             print(f"{student + " - " + student_records[student]["NAME"]:50}")
             column_1 = True
+            
+    if not column_1:
+        print()
 
     print("\nA - Add new student",
           "\nQ - Return to main menu")
@@ -59,9 +69,6 @@ def list_records(student_records):
 
 
 def student_details(student, student_records):
-    details_menu_options = {"U": update, 
-                            "D": delete}
-
     average_marks = (sum(student_records[student]["GRADES"].values())
                      / len(student_records[student]["GRADES"])) 
 
@@ -80,7 +87,13 @@ def student_details(student, student_records):
 
     open_details = True
     error = False
-    error_message = "Error message"
+
+    with (open("./files/Jayden_Chan_Project/misc/menu_error.txt") 
+          as error_message):
+        error_message = error_message.read()
+    
+    details_menu_options = {"U": update, 
+                            "D": delete}
 
     while open_details:
         clear()

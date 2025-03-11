@@ -13,33 +13,35 @@ def main():
     with open("./files/Jayden_Chan_Project/misc/main_menu.txt") as main_menu:
         main_menu = main_menu.read()
 
-        open_main = True
-        error = False
-        error_message = "Error message"
+    open_main = True
+    error = False
 
-        while open_main:
+    with (open("./files/Jayden_Chan_Project/misc/menu_error.txt") 
+          as error_message):
+        error_message = error_message.read()
+
+    while open_main:
+        clear()
+        print(main_menu)
+
+        if error:
+            print(error_message)
+            error = False
+            
+        user_input = input("Choose an option: ").upper()
+
+        if user_input in main_menu_options:
+            main_menu_options[user_input]()
             clear()
             print(main_menu)
 
-            if error:
-                print(error_message)
-                error = False
-                
-            user_input = input("Choose an option: ").upper()
+        elif user_input == "Q":
+            open_main = False
+            clear()
+            print("Program shutdown \nHasta la vista!")
 
-            if user_input in main_menu_options:
-                main_menu_options[user_input]()
-                clear()
-                print(main_menu)
-
-            elif user_input == "Q":
-                open_main = False
-                print("quitting")
-
-            else:
-                clear()
-                print(main_menu)
-                print(error_message)    
+        else:
+            error = True
 
 
 def search():

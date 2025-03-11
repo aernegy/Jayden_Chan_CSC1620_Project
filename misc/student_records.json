@@ -1,460 +1,235 @@
 {
     "1": {
-        "NAME": "Abigail",
-        "ID": 10101010,
-        "GRADES": {
-            "Mathematics": 90,
-            "English": 50,
-            "Science": 20
-        }
-    },
-    "2": {
-        "NAME": "Jerome",
-        "ID": 293729,
-        "GRADES": {
-            "Mathematics": 90,
-            "English": 50,
-            "Science": 20
-        }
-    },
-    "3": {
-        "NAME": "Sophia",
-        "ID": 10293847,
-        "GRADES": {
-            "Mathematics": 85,
-            "English": 88,
-            "Science": 75
-        }
-    },
-    "4": {
-        "NAME": "Liam",
-        "ID": 29384756,
-        "GRADES": {
-            "Mathematics": 95,
-            "English": 80,
-            "Science": 70
-        }
-    },
-    "5": {
-        "NAME": "Olivia",
-        "ID": 34857629,
-        "GRADES": {
-            "Mathematics": 80,
-            "English": 92,
-            "Science": 60
-        }
-    },
-    "6": {
-        "NAME": "Ethan",
-        "ID": 12039475,
-        "GRADES": {
-            "Mathematics": 78,
-            "English": 85,
-            "Science": 82
-        }
-    },
-    "7": {
-        "NAME": "Ava",
-        "ID": 49385721,
-        "GRADES": {
-            "Mathematics": 92,
-            "English": 67,
-            "Science": 88
-        }
-    },
-    "8": {
-        "NAME": "Mason",
-        "ID": 38475610,
-        "GRADES": {
-            "Mathematics": 83,
-            "English": 70,
-            "Science": 85
-        }
-    },
-    "9": {
-        "NAME": "Isabella",
-        "ID": 28374619,
-        "GRADES": {
-            "Mathematics": 76,
-            "English": 80,
-            "Science": 90
-        }
-    },
-    "10": {
-        "NAME": "James",
-        "ID": 34856782,
-        "GRADES": {
-            "Mathematics": 91,
-            "English": 66,
-            "Science": 78
-        }
-    },
-    "11": {
-        "NAME": "Charlotte",
-        "ID": 28475639,
-        "GRADES": {
-            "Mathematics": 82,
-            "English": 95,
-            "Science": 68
-        }
-    },
-    "12": {
-        "NAME": "Benjamin",
-        "ID": 48576290,
-        "GRADES": {
-            "Mathematics": 90,
-            "English": 55,
-            "Science": 89
-        }
-    },
-    "13": {
-        "NAME": "Amelia",
-        "ID": 56283940,
-        "GRADES": {
-            "Mathematics": 88,
-            "English": 91,
-            "Science": 74
-        }
-    },
-    "14": {
-        "NAME": "Henry",
-        "ID": 39485720,
-        "GRADES": {
-            "Mathematics": 95,
-            "English": 60,
-            "Science": 80
-        }
-    },
-    "15": {
-        "NAME": "Ella",
-        "ID": 58374629,
-        "GRADES": {
-            "Mathematics": 79,
-            "English": 85,
-            "Science": 91
-        }
-    },
-    "16": {
-        "NAME": "Alexander",
-        "ID": 84759362,
-        "GRADES": {
-            "Mathematics": 72,
-            "English": 67,
-            "Science": 80
-        }
-    },
-    "17": {
-        "NAME": "Mia",
-        "ID": 94857283,
-        "GRADES": {
-            "Mathematics": 84,
-            "English": 90,
-            "Science": 77
-        }
-    },
-    "18": {
-        "NAME": "Lucas",
-        "ID": 56783912,
-        "GRADES": {
-            "Mathematics": 95,
-            "English": 63,
-            "Science": 88
-        }
-    },
-    "19": {
-        "NAME": "Zoe",
-        "ID": 82736490,
-        "GRADES": {
-            "Mathematics": 86,
-            "English": 78,
-            "Science": 91
-        }
-    },
-    "20": {
-        "NAME": "Jack",
-        "ID": 92847356,
-        "GRADES": {
-            "Mathematics": 79,
-            "English": 72,
-            "Science": 85
-        }
-    },
-    "21": {
-        "NAME": "Lily",
-        "ID": 11223344,
-        "GRADES": {
-            "Mathematics": 88,
-            "English": 75,
-            "Science": 92
-        }
-    },
-    "22": {
-        "NAME": "Logan",
-        "ID": 33445566,
-        "GRADES": {
-            "Mathematics": 94,
-            "English": 84,
-            "Science": 69
-        }
-    },
-    "23": {
-        "NAME": "Evelyn",
-        "ID": 66778899,
-        "GRADES": {
-            "Mathematics": 89,
-            "English": 90,
-            "Science": 76
-        }
-    },
-    "24": {
-        "NAME": "Nathan",
-        "ID": 12345678,
-        "GRADES": {
-            "Mathematics": 92,
-            "English": 60,
-            "Science": 95
-        }
-    },
-    "25": {
-        "NAME": "Harper",
-        "ID": 87654321,
-        "GRADES": {
-            "Mathematics": 80,
-            "English": 67,
-            "Science": 87
-        }
-    },
-    "26": {
-        "NAME": "Sebastian",
-        "ID": 19038465,
-        "GRADES": {
-            "Mathematics": 90,
-            "English": 65,
-            "Science": 88
-        }
-    },
-    "27": {
-        "NAME": "Grace",
-        "ID": 27485930,
-        "GRADES": {
-            "Mathematics": 78,
-            "English": 88,
-            "Science": 70
-        }
-    },
-    "28": {
-        "NAME": "Ryan",
-        "ID": 38465921,
-        "GRADES": {
-            "Mathematics": 92,
-            "English": 75,
-            "Science": 93
-        }
-    },
-    "29": {
-        "NAME": "Maya",
-        "ID": 47563819,
-        "GRADES": {
-            "Mathematics": 82,
-            "English": 90,
-            "Science": 88
-        }
-    },
-    "30": {
-        "NAME": "David",
-        "ID": 58462730,
-        "GRADES": {
-            "Mathematics": 80,
-            "English": 64,
-            "Science": 85
-        }
-    },
-    "31": {
-        "NAME": "Chloe",
-        "ID": 63852701,
-        "GRADES": {
-            "Mathematics": 93,
-            "English": 87,
-            "Science": 69
-        }
-    },
-    "32": {
-        "NAME": "Owen",
-        "ID": 73983620,
-        "GRADES": {
-            "Mathematics": 91,
-            "English": 55,
-            "Science": 92
-        }
-    },
-    "33": {
-        "NAME": "Madeline",
-        "ID": 83019465,
-        "GRADES": {
-            "Mathematics": 75,
-            "English": 89,
-            "Science": 79
-        }
-    },
-    "34": {
-        "NAME": "Gabriel",
-        "ID": 19203048,
-        "GRADES": {
-            "Mathematics": 94,
-            "English": 81,
-            "Science": 85
-        }
-    },
-    "35": {
-        "NAME": "Aria",
-        "ID": 83749201,
-        "GRADES": {
-            "Mathematics": 79,
-            "English": 80,
-            "Science": 87
-        }
-    },
-    "36": {
-        "NAME": "William",
-        "ID": 48392065,
-        "GRADES": {
-            "Mathematics": 85,
-            "English": 79,
-            "Science": 91
-        }
-    },
-    "37": {
-        "NAME": "Ella",
-        "ID": 39574682,
-        "GRADES": {
-            "Mathematics": 78,
-            "English": 92,
-            "Science": 81
-        }
-    },
-    "38": {
-        "NAME": "Samuel",
-        "ID": 24837492,
-        "GRADES": {
-            "Mathematics": 90,
-            "English": 69,
-            "Science": 78
-        }
-    },
-    "39": {
-        "NAME": "Zara",
-        "ID": 28374691,
-        "GRADES": {
-            "Mathematics": 92,
-            "English": 87,
-            "Science": 88
-        }
-    },
-    "40": {
-        "NAME": "Mila",
-        "ID": 49586272,
-        "GRADES": {
-            "Mathematics": 80,
-            "English": 80,
-            "Science": 85
-        }
-    },
-    "41": {
-        "NAME": "Jameson",
-        "ID": 29374749,
-        "GRADES": {
-            "Mathematics": 94,
-            "English": 67,
-            "Science": 90
-        }
-    },
-    "42": {
-        "NAME": "Piper",
-        "ID": 48576911,
-        "GRADES": {
-            "Mathematics": 75,
-            "English": 60,
-            "Science": 85
-        }
-    },
-    "43": {
-        "NAME": "Eli",
-        "ID": 82736372,
-        "GRADES": {
-            "Mathematics": 80,
-            "English": 84,
-            "Science": 78
-        }
-    },
-    "44": {
-        "NAME": "Grace",
-        "ID": 91726383,
-        "GRADES": {
-            "Mathematics": 90,
-            "English": 80,
-            "Science": 75
-        }
-    },
-    "45": {
-        "NAME": "Max",
-        "ID": 82937645,
-        "GRADES": {
-            "Mathematics": 85,
-            "English": 70,
-            "Science": 88
-        }
-    },
-    "46": {
-        "NAME": "Sophie",
-        "ID": 73948612,
-        "GRADES": {
-            "Mathematics": 92,
-            "English": 77,
-            "Science": 93
-        }
-    },
-    "47": {
-        "NAME": "Isaac",
-        "ID": 48573956,
-        "GRADES": {
-            "Mathematics": 80,
-            "English": 85,
-            "Science": 92
-        }
-    },
-    "48": {
-        "NAME": "Emma",
-        "ID": 57683904,
-        "GRADES": {
-            "Mathematics": 90,
-            "English": 82,
-            "Science": 70
-        }
-    },
-    "49": {
-        "NAME": "Noah",
-        "ID": 92038475,
-        "GRADES": {
-            "Mathematics": 92,
-            "English": 76,
-            "Science": 84
-        }
-    },
-    "50": {
-        "NAME": "Landon",
-        "ID": 83749256,
-        "GRADES": {
-            "Mathematics": 85,
-            "English": 80,
-            "Science": 88
-        }
-    },
-    "51": {
-        "NAME": "Jayden",
+        "NAME": "Jayden Chan Zhung Zhuo",
         "ID": "0029527",
         "GRADES": {
             "Mathematics": 100.0,
             "Economics": 75.0
+        }
+    },
+    "2": {
+        "NAME": "Ava Liam Peterson",
+        "ID": "0038462",
+        "GRADES": {
+            "Biology": 88.0,
+            "Physics": 92.0,
+            "Chemistry": 85.0
+        }
+    },
+    "3": {
+        "NAME": "Mason George Sullivan",
+        "ID": "0012457",
+        "GRADES": {
+            "History": 82.0,
+            "Literature": 74.0
+        }
+    },
+    "4": {
+        "NAME": "Isabella Sophia Johnson",
+        "ID": "0058324",
+        "GRADES": {
+            "Mathematics": 78.0,
+            "English": 87.0,
+            "Art": 95.0
+        }
+    },
+    "5": {
+        "NAME": "Elijah Ryan Brooks",
+        "ID": "0043211",
+        "GRADES": {
+            "Mathematics": 92.0,
+            "History": 80.0
+        }
+    },
+    "6": {
+        "NAME": "Olivia Claire Roberts",
+        "ID": "0093745",
+        "GRADES": {
+            "Economics": 60.0,
+            "Philosophy": 89.0
+        }
+    },
+    "7": {
+        "NAME": "James William Harris",
+        "ID": "0062357",
+        "GRADES": {
+            "Biology": 91.0,
+            "Chemistry": 80.0
+        }
+    },
+    "8": {
+        "NAME": "Charlotte Amelia Scott",
+        "ID": "0081246",
+        "GRADES": {
+            "Physics": 85.0,
+            "Mathematics": 98.0,
+            "Music": 79.0
+        }
+    },
+    "9": {
+        "NAME": "Ethan Michael Davis",
+        "ID": "0078431",
+        "GRADES": {
+            "Philosophy": 88.0,
+            "Computer Science": 92.0,
+            "English": 78.0
+        }
+    },
+    "10": {
+        "NAME": "Zoe Mia Clark",
+        "ID": "0109845",
+        "GRADES": {
+            "Geography": 85.0,
+            "History": 90.0
+        }
+    },
+    "11": {
+        "NAME": "Alexander Matthew White",
+        "ID": "0112349",
+        "GRADES": {
+            "Literature": 82.0,
+            "Biology": 95.0
+        }
+    },
+    "12": {
+        "NAME": "Sophia Emma Taylor",
+        "ID": "0129876",
+        "GRADES": {
+            "Physics": 76.0,
+            "Mathematics": 88.0
+        }
+    },
+    "13": {
+        "NAME": "Benjamin Jack Miller",
+        "ID": "0135698",
+        "GRADES": {
+            "Economics": 79.0,
+            "Chemistry": 85.0,
+            "History": 92.0
+        }
+    },
+    "14": {
+        "NAME": "Lily Grace Anderson",
+        "ID": "0142847",
+        "GRADES": {
+            "Art": 98.0,
+            "English": 89.0
+        }
+    },
+    "15": {
+        "NAME": "Lucas Daniel Wilson",
+        "ID": "0157389",
+        "GRADES": {
+            "Mathematics": 91.0,
+            "Computer Science": 84.0,
+            "Physics": 79.0
+        }
+    },
+    "16": {
+        "NAME": "Mia Harper Evans",
+        "ID": "0162357",
+        "GRADES": {
+            "Mathematics": 77.0,
+            "History": 83.0,
+            "Literature": 92.0
+        }
+    },
+    "17": {
+        "NAME": "Henry Thomas Collins",
+        "ID": "0179842",
+        "GRADES": {
+            "Philosophy": 88.0,
+            "Biology": 76.0
+        }
+    },
+    "18": {
+        "NAME": "Eleanor Elizabeth Martinez",
+        "ID": "0186421",
+        "GRADES": {
+            "Geography": 82.0,
+            "History": 90.0,
+            "Literature": 89.0
+        }
+    },
+    "19": {
+        "NAME": "Jack Alexander Lee",
+        "ID": "0197413",
+        "GRADES": {
+            "Art": 93.0,
+            "Mathematics": 80.0,
+            "Economics": 76.0
+        }
+    },
+    "20": {
+        "NAME": "Amelia Grace King",
+        "ID": "0204317",
+        "GRADES": {
+            "Chemistry": 87.0,
+            "Mathematics": 79.0,
+            "English": 91.0
+        }
+    },
+    "21": {
+        "NAME": "Nathan Lucas Moore",
+        "ID": "0216345",
+        "GRADES": {
+            "Physics": 92.0,
+            "Chemistry": 89.0
+        }
+    },
+    "22": {
+        "NAME": "Ella Victoria Nelson",
+        "ID": "0228765",
+        "GRADES": {
+            "Mathematics": 95.0,
+            "Literature": 82.0
+        }
+    },
+    "23": {
+        "NAME": "William Robert Young",
+        "ID": "0236451",
+        "GRADES": {
+            "Economics": 78.0,
+            "Art": 91.0,
+            "Geography": 87.0
+        }
+    },
+    "24": {
+        "NAME": "Grace Lily Allen",
+        "ID": "0248273",
+        "GRADES": {
+            "History": 86.0,
+            "Chemistry": 92.0
+        }
+    },
+    "25": {
+        "NAME": "Daniel Noah Carter",
+        "ID": "0251932",
+        "GRADES": {
+            "Literature": 75.0,
+            "Physics": 90.0,
+            "Computer Science": 89.0
+        }
+    },
+    "26": {
+        "NAME": "1",
+        "ID": "1",
+        "GRADES": {
+            "1": 1.0
+        }
+    },
+    "27": {
+        "NAME": "1",
+        "ID": "1",
+        "GRADES": {
+            "1": 1.0
+        }
+    },
+    "28": {
+        "NAME": "1",
+        "ID": "1",
+        "GRADES": {
+            "1": 1.0
         }
     }
 }
