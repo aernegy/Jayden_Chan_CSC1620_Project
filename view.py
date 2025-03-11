@@ -1,21 +1,20 @@
-import json
+from json import load
 from misc.clear import clear
 from add import add
-from delete import delete
-from update import update
+from student_details import student_details
 
 
 def view():
-    with (open("./files/Jayden_Chan_Project/misc/student_records.json", "r+") 
+    with (open("./misc/student_records.json", "r+") 
           as student_records_json):
-        student_records = json.load(student_records_json)
+        student_records = load(student_records_json)
 
     list_records(student_records)
 
     open_view = True
     error = False
     
-    with (open("./files/Jayden_Chan_Project/misc/menu_error.txt") 
+    with (open("./misc/menu_error.txt") 
           as error_message):
         error_message = error_message.read()
 
@@ -28,14 +27,19 @@ def view():
 
         user_input = input("Choose an option: ").upper()
 
-        if user_input in student_records:
-            student_details(user_input, student_records)
+        if user_input in [f"{num}" for num 
+                          in range(1, len(student_records) + 1)]:
+            student_details(int(user_input) - 1)
+            
+            with (open("./misc/student_records.json", "r+") 
+                  as student_records_json):
+                student_records = load(student_records_json)
 
         elif user_input == "A":
             add()
-            with (open("./files/Jayden_Chan_Project/misc/student_records.json", 
-                       "r+") as student_records_json):
-                student_records = json.load(student_records_json)
+            with (open("./misc/student_records.json", "r+") 
+                  as student_records_json):
+                student_records = load(student_records_json)
 
         elif user_input == "Q":
             open_view = False
@@ -50,13 +54,17 @@ def list_records(student_records):
     column_1 = True
 
     for student in student_records:
+        row = str(student_no) + " - " + student_records[student_no - 1]["NAME"]
         if column_1:
-            print(f"{student + " - " + student_records[student]["NAME"]:50}", 
-                  end="")
+            print(f"{row:50}", end="")
+
+            student_no += 1
             column_1 = False
 
         else:
-            print(f"{student + " - " + student_records[student]["NAME"]:50}")
+            print(f"{row:50}")
+            
+            student_no += 1
             column_1 = True
             
     if not column_1:
@@ -67,56 +75,3 @@ def list_records(student_records):
 
     print("STUDENT RECORDS\n")
 
-
-def student_details(student, student_records):
-    average_marks = (sum(student_records[student]["GRADES"].values())
-                     / len(student_records[student]["GRADES"])) 
-
-    if average_marks >= 85:
-        grade = "A"
-
-    elif 70 <= average_marks < 85:
-        grade = "B"
-
-    elif 50 <= average_marks < 70:
-        grade = "C"
-
-    elif average < 50:
-        grade = "F"
-    
-
-    open_details = True
-    error = False
-
-    with (open("./files/Jayden_Chan_Project/misc/menu_error.txt") 
-          as error_message):
-        error_message = error_message.read()
-    
-    details_menu_options = {"U": update, 
-                            "D": delete}
-
-    while open_details:
-        clear()
-
-        print("NAME:", student_records[student]["NAME"],
-            "\nID:", student_records[student]["ID"],
-            "\n\nGRADE:", grade)
-
-        for subject in student_records[student]["GRADES"]:
-            print(f"{subject}: {student_records[student]["GRADES"][subject]}")
-
-        print("\nU - Update details",
-            "\nD - Delete student record",
-            "\nQ - Return to student records")
-
-        if error:
-            print(error_message)
-            error = False
-
-        user_input = input("\nChoose an option: ").upper()
-
-        if user_input in details_menu_options:
-            details_menu_options[user_input]()
-
-        elif user_input == "Q":
-            open_details = False

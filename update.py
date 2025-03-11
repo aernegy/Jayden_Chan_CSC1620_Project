@@ -1,2 +1,2 @@
-def update():
+def update(student):
     print("Updating")

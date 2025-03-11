@@ -40,8 +40,7 @@ def add():
 
     new_student = {"NAME": name, "ID": id, "GRADES": grades}
 
-    with (open("./files/Jayden_Chan_Project/misc/student_records.json", "r+") 
-          as student_records_json):
+    with open("./misc/student_records.json", "r+") as student_records_json:
         student_records = load(student_records_json)
 
         student_records.update({f"{len(student_records) + 1}": new_student})

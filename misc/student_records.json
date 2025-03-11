@@ -1,5 +1,5 @@
-{
-    "1": {
+[
+    {
         "NAME": "Jayden Chan Zhung Zhuo",
         "ID": "0029527",
         "GRADES": {
@@ -7,7 +7,7 @@
             "Economics": 75.0
         }
     },
-    "2": {
+    {
         "NAME": "Ava Liam Peterson",
         "ID": "0038462",
         "GRADES": {
@@ -16,7 +16,7 @@
             "Chemistry": 85.0
         }
     },
-    "3": {
+    {
         "NAME": "Mason George Sullivan",
         "ID": "0012457",
         "GRADES": {
@@ -24,7 +24,7 @@
             "Literature": 74.0
         }
     },
-    "4": {
+    {
         "NAME": "Isabella Sophia Johnson",
         "ID": "0058324",
         "GRADES": {
@@ -33,7 +33,7 @@
             "Art": 95.0
         }
     },
-    "5": {
+    {
         "NAME": "Elijah Ryan Brooks",
         "ID": "0043211",
         "GRADES": {
@@ -41,7 +41,7 @@
             "History": 80.0
         }
     },
-    "6": {
+    {
         "NAME": "Olivia Claire Roberts",
         "ID": "0093745",
         "GRADES": {
@@ -49,7 +49,7 @@
             "Philosophy": 89.0
         }
     },
-    "7": {
+    {
         "NAME": "James William Harris",
         "ID": "0062357",
         "GRADES": {
@@ -57,7 +57,7 @@
             "Chemistry": 80.0
         }
     },
-    "8": {
+    {
         "NAME": "Charlotte Amelia Scott",
         "ID": "0081246",
         "GRADES": {
@@ -66,7 +66,7 @@
             "Music": 79.0
         }
     },
-    "9": {
+    {
         "NAME": "Ethan Michael Davis",
         "ID": "0078431",
         "GRADES": {
@@ -75,7 +75,7 @@
             "English": 78.0
         }
     },
-    "10": {
+    {
         "NAME": "Zoe Mia Clark",
         "ID": "0109845",
         "GRADES": {
@@ -83,7 +83,7 @@
             "History": 90.0
         }
     },
-    "11": {
+    {
         "NAME": "Alexander Matthew White",
         "ID": "0112349",
         "GRADES": {
@@ -91,7 +91,7 @@
             "Biology": 95.0
         }
     },
-    "12": {
+    {
         "NAME": "Sophia Emma Taylor",
         "ID": "0129876",
         "GRADES": {
@@ -99,7 +99,7 @@
             "Mathematics": 88.0
         }
     },
-    "13": {
+    {
         "NAME": "Benjamin Jack Miller",
         "ID": "0135698",
         "GRADES": {
@@ -108,7 +108,7 @@
             "History": 92.0
         }
     },
-    "14": {
+    {
         "NAME": "Lily Grace Anderson",
         "ID": "0142847",
         "GRADES": {
@@ -116,7 +116,7 @@
             "English": 89.0
         }
     },
-    "15": {
+    {
         "NAME": "Lucas Daniel Wilson",
         "ID": "0157389",
         "GRADES": {
@@ -125,7 +125,7 @@
             "Physics": 79.0
         }
     },
-    "16": {
+    {
         "NAME": "Mia Harper Evans",
         "ID": "0162357",
         "GRADES": {
@@ -134,7 +134,7 @@
             "Literature": 92.0
         }
     },
-    "17": {
+    {
         "NAME": "Henry Thomas Collins",
         "ID": "0179842",
         "GRADES": {
@@ -142,7 +142,7 @@
             "Biology": 76.0
         }
     },
-    "18": {
+    {
         "NAME": "Eleanor Elizabeth Martinez",
         "ID": "0186421",
         "GRADES": {
@@ -151,7 +151,7 @@
             "Literature": 89.0
         }
     },
-    "19": {
+    {
         "NAME": "Jack Alexander Lee",
         "ID": "0197413",
         "GRADES": {
@@ -160,7 +160,7 @@
             "Economics": 76.0
         }
     },
-    "20": {
+    {
         "NAME": "Amelia Grace King",
         "ID": "0204317",
         "GRADES": {
@@ -169,7 +169,7 @@
             "English": 91.0
         }
     },
-    "21": {
+    {
         "NAME": "Nathan Lucas Moore",
         "ID": "0216345",
         "GRADES": {
@@ -177,15 +177,7 @@
             "Chemistry": 89.0
         }
     },
-    "22": {
-        "NAME": "Ella Victoria Nelson",
-        "ID": "0228765",
-        "GRADES": {
-            "Mathematics": 95.0,
-            "Literature": 82.0
-        }
-    },
-    "23": {
+    {
         "NAME": "William Robert Young",
         "ID": "0236451",
         "GRADES": {
@@ -194,7 +186,7 @@
             "Geography": 87.0
         }
     },
-    "24": {
+    {
         "NAME": "Grace Lily Allen",
         "ID": "0248273",
         "GRADES": {
@@ -202,7 +194,7 @@
             "Chemistry": 92.0
         }
     },
-    "25": {
+    {
         "NAME": "Daniel Noah Carter",
         "ID": "0251932",
         "GRADES": {
@@ -210,26 +202,5 @@
             "Physics": 90.0,
             "Computer Science": 89.0
         }
-    },
-    "26": {
-        "NAME": "1",
-        "ID": "1",
-        "GRADES": {
-            "1": 1.0
-        }
-    },
-    "27": {
-        "NAME": "1",
-        "ID": "1",
-        "GRADES": {
-            "1": 1.0
-        }
-    },
-    "28": {
-        "NAME": "1",
-        "ID": "1",
-        "GRADES": {
-            "1": 1.0
-        }
     }
-}
+]

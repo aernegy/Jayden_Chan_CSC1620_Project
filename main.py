@@ -10,13 +10,13 @@ def main():
                          "2": search
                          }
                          
-    with open("./files/Jayden_Chan_Project/misc/main_menu.txt") as main_menu:
+    with open("./misc/main_menu.txt") as main_menu:
         main_menu = main_menu.read()
 
     open_main = True
     error = False
 
-    with (open("./files/Jayden_Chan_Project/misc/menu_error.txt") 
+    with (open("./misc/menu_error.txt") 
           as error_message):
         error_message = error_message.read()
 
