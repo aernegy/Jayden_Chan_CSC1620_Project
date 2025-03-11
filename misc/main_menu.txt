@@ -2,5 +2,4 @@ STUDENT RECORDS
 
 1 - View
 2 - Search
-3 - Add
 Q - Quit

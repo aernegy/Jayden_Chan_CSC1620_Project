@@ -1,0 +1,2 @@
+def delete():
+    print("Deleting")
