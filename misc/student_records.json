@@ -129,9 +129,9 @@
         "NAME": "Mia Harper Evans",
         "ID": "0162357",
         "GRADES": {
-            "Mathematics": 77.0,
             "History": 83.0,
-            "Literature": 92.0
+            "Literature": 92.0,
+            "Mathematics": 100.0
         }
     },
     {
@@ -182,7 +182,6 @@
         "ID": "0236451",
         "GRADES": {
             "Economics": 78.0,
-            "Art": 91.0,
             "Geography": 87.0
         }
     },

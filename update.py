@@ -59,10 +59,12 @@ def update(student, student_records):
 
 
         elif user_input == "A":
+            mylist = [name.upper() for name in student_records[student]["GRADES"].keys()]
+            print(mylist)
             new_sub = subject_update()
 
             for key in new_sub:
-                if key in [name.upper() for name in student_records[student]["GRADES"].keys()]:
+                if key.upper() in mylist:
                     print("ERROR: Subject already exists")
                     sleep(2)
                     break

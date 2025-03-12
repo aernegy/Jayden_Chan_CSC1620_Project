@@ -3,34 +3,35 @@ from misc.clear import clear
 from update import update
 from delete import delete
 
+
 def student_details(student, student_records):
-    average_marks = (sum(student_records[student]["GRADES"].values())
-                     / len(student_records[student]["GRADES"])) 
-
-    if average_marks >= 85:
-        grade = "A"
-
-    elif 70 <= average_marks < 85:
-        grade = "B"
-
-    elif 50 <= average_marks < 70:
-        grade = "C"
-
-    elif average_marks < 50:
-        grade = "F"
-    
+    with open("./misc/menu_error.txt") as error_message:
+        error_message = error_message.read()
 
     open_details = True
     error = False
 
-    with open("./misc/menu_error.txt") as error_message:
-        error_message = error_message.read()
-    
     details_menu_options = {"U": update, 
                             "D": delete}
 
 
     while open_details:
+        average_marks = (sum(student_records[student]["GRADES"].values())
+                     / len(student_records[student]["GRADES"])) 
+
+        if average_marks >= 85:
+            grade = "A"
+
+        elif 70 <= average_marks < 85:
+            grade = "B"
+
+        elif 50 <= average_marks < 70:
+            grade = "C"
+
+        elif average_marks < 50:
+            grade = "F"
+
+
         clear()
 
         print("NAME:", student_records[student]["NAME"],
