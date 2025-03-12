@@ -2,17 +2,14 @@ from json import dump, load
 from time import sleep
 
 
-def delete(student):
+def delete(student, student_records):
     user_input = input("Enter Y to confirm deletion: ").upper()
 
     if user_input == "Y":
-        with open("./misc/student_records.json", "r+") as student_records_json:
-            student_records = load(student_records_json)
-
         del student_records[student]
 
-        with open("./misc/student_records.json", "w") as student_records_json:
-            dump(student_records, student_records_json, indent=4)
+        with open("./misc/student_records.json", "w") as records_json:
+            dump(student_records, records_json, indent=4)
 
         print("DELETED SUCCESSFULLY!")
 
@@ -22,3 +19,5 @@ def delete(student):
         print("DELETION CANCELLED!")
 
         sleep(2)
+
+    return student_records

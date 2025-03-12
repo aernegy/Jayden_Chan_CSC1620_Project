@@ -3,7 +3,7 @@ from time import sleep
 from json import dump, load
 
 
-def add():
+def add(student_records):
     clear()
 
     name = input("Enter student name: ")
@@ -17,19 +17,19 @@ def add():
         except ValueError:
             pass
     
-    subjects = []
+    subjects = ()
 
     for num in range(1, num_subjects + 1):
-        subjects.append(input(f"Enter subject {num} name: "))
+        subjects += input(f"Enter subject {num} name: "),
 
     print()
 
-    marks = []
+    marks = ()
 
     for subject in subjects:
         while True:
             try:
-                marks.append(float(input(f"Enter {subject} grade: ")))
+                marks += float(input(f"Enter {subject} grade: ")),
                 break
 
             except ValueError:
@@ -40,14 +40,10 @@ def add():
 
     new_student = {"NAME": name, "ID": id, "GRADES": grades}
 
-    with open("./misc/student_records.json", "r+") as student_records_json:
-        student_records = load(student_records_json)
+    student_records.append(new_student)
 
-        student_records.update({f"{len(student_records) + 1}": new_student})
-
-        student_records_json.seek(0)
-
-        dump(student_records, student_records_json, indent=4)
+    with open("./misc/student_records.json", "w") as records_json:
+        dump(student_records, records_json, indent=4)
             
 
     clear()
@@ -55,3 +51,5 @@ def add():
     print("STUDENT ADDED!")
 
     sleep(2)
+
+    return student_records

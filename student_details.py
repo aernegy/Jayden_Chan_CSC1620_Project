@@ -3,10 +3,7 @@ from misc.clear import clear
 from update import update
 from delete import delete
 
-def student_details(student):
-    with open("./misc/student_records.json", "r+") as student_records_json:
-        student_records = load(student_records_json)
-
+def student_details(student, student_records):
     average_marks = (sum(student_records[student]["GRADES"].values())
                      / len(student_records[student]["GRADES"])) 
 
@@ -26,12 +23,12 @@ def student_details(student):
     open_details = True
     error = False
 
-    with (open("./misc/menu_error.txt") 
-          as error_message):
+    with open("./misc/menu_error.txt") as error_message:
         error_message = error_message.read()
     
     details_menu_options = {"U": update, 
                             "D": delete}
+
 
     while open_details:
         clear()
@@ -54,14 +51,17 @@ def student_details(student):
         user_input = input("\nChoose an option: ").upper()
 
         if user_input in details_menu_options:
-            details_menu_options[user_input](student)
-
-            with (open("./misc/student_records.json", "r+") 
-                  as student_records_json):
-                student_records = load(student_records_json)
+            student_records = details_menu_options[user_input](student, 
+                                                               student_records
+                                                               )
 
             if user_input == "D":
                 break
 
         elif user_input == "Q":
             open_details = False
+
+        else:
+            error = True
+
+    return student_records

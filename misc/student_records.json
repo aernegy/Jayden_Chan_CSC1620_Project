@@ -4,7 +4,7 @@
         "ID": "0029527",
         "GRADES": {
             "Mathematics": 100.0,
-            "Economics": 75.0
+            "Macroeconomics": 75.0
         }
     },
     {
@@ -198,9 +198,8 @@
         "NAME": "Daniel Noah Carter",
         "ID": "0251932",
         "GRADES": {
-            "Literature": 75.0,
-            "Physics": 90.0,
-            "Computer Science": 89.0
+            "Literature": 100.0,
+            "Add Math": 50.0
         }
     }
 ]

@@ -6,17 +6,17 @@ from student_details import student_details
 
 def view():
     with (open("./misc/student_records.json", "r+") 
-          as student_records_json):
-        student_records = load(student_records_json)
+          as records_json):
+        student_records = load(records_json)
 
-    list_records(student_records)
-
-    open_view = True
-    error = False
-    
     with (open("./misc/menu_error.txt") 
           as error_message):
         error_message = error_message.read()
+
+    open_view = True
+    error = False
+    student_options = [f"{num}" for num in range(1, len(student_records) + 1)]
+
 
     while open_view:
         list_records(student_records)
@@ -27,19 +27,14 @@ def view():
 
         user_input = input("Choose an option: ").upper()
 
-        if user_input in [f"{num}" for num 
-                          in range(1, len(student_records) + 1)]:
-            student_details(int(user_input) - 1)
-            
-            with (open("./misc/student_records.json", "r+") 
-                  as student_records_json):
-                student_records = load(student_records_json)
-
-        elif user_input == "A":
-            add()
-            with (open("./misc/student_records.json", "r+") 
-                  as student_records_json):
-                student_records = load(student_records_json)
+        if user_input in student_options or user_input == "A":
+            if user_input in student_options:
+                student_records = student_details(int(user_input) - 1, 
+                                                  student_records
+                                                  )
+                
+            elif user_input == "A":
+                student_records = add(student_records)
 
         elif user_input == "Q":
             open_view = False
