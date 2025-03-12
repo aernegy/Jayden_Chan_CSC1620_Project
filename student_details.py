@@ -43,7 +43,7 @@ def student_details(student, student_records):
 
         print("\nU - Update details",
             "\nD - Delete student record",
-            "\nQ - Return to student records")
+            "\nQ - Return")
 
         if error:
             print(error_message)

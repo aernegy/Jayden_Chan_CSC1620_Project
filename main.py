@@ -4,21 +4,21 @@ from misc.clear import clear
 
 
 def main():
+    with open("./misc/main_menu.txt") as main_menu:
+        main_menu = main_menu.read()
+
+    with (open("./misc/menu_error.txt") 
+          as error_message):
+        error_message = error_message.read()
+
     clear()
 
     main_menu_options = {"1": view, 
                          "2": search
                          }
                          
-    with open("./misc/main_menu.txt") as main_menu:
-        main_menu = main_menu.read()
-
     open_main = True
     error = False
-
-    with (open("./misc/menu_error.txt") 
-          as error_message):
-        error_message = error_message.read()
 
     while open_main:
         clear()
@@ -42,10 +42,6 @@ def main():
 
         else:
             error = True
-
-
-def search():
-    print("Searching")
     
 
 main()

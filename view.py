@@ -27,14 +27,13 @@ def view():
 
         user_input = input("Choose an option: ").upper()
 
-        if user_input in student_options or user_input == "A":
-            if user_input in student_options:
-                student_records = student_details(int(user_input) - 1, 
-                                                  student_records
-                                                  )
+        if user_input in student_options:
+            student_records = student_details(int(user_input) - 1, 
+                                                student_records
+                                                )
                 
-            elif user_input == "A":
-                student_records = add(student_records)
+        elif user_input == "A":
+            student_records = add(student_records)
 
         elif user_input == "Q":
             open_view = False
@@ -48,25 +47,21 @@ def list_records(student_records):
     student_no = 1
     column_1 = True
 
+    print("STUDENT RECORDS\n")
+
     for student in student_records:
         row = str(student_no) + " - " + student_records[student_no - 1]["NAME"]
         if column_1:
             print(f"{row:50}", end="")
 
-            student_no += 1
-            column_1 = False
-
         else:
             print(f"{row:50}")
-            
-            student_no += 1
-            column_1 = True
+        
+        student += 1
+        column_1 = not column_1
             
     if not column_1:
         print()
 
     print("\nA - Add new student",
-          "\nQ - Return to main menu")
-
-    print("STUDENT RECORDS\n")
-
+          "\nQ - Return to main menu\n")

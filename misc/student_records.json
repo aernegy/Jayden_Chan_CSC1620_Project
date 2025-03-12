@@ -161,12 +161,12 @@
         }
     },
     {
-        "NAME": "Amelia Grace King",
+        "NAME": "Amelia",
         "ID": "0204317",
         "GRADES": {
-            "Chemistry": 87.0,
             "Mathematics": 79.0,
-            "English": 91.0
+            "English": 91.0,
+            "Physics": 75.0
         }
     },
     {
