@@ -9,7 +9,11 @@ def update(student, student_records):
     
     open_update = True
     error = False
+
+    #Menu options for updating name or ID
     details_options = {"1": "NAME", "2": "ID"}
+
+    #Menu options for updating about existing subjects
     subject_options = [f"{num}" for num in 
                       range(3, len(student_records[student]["GRADES"]) + 3)]
                       
@@ -28,26 +32,31 @@ def update(student, student_records):
         user_input = input("Choose field to update: ").upper()
 
         if user_input in details_options or user_input in subject_options:
+            #To update details about name and id.
             if user_input in details_options:
                 val = input("\nEnter new value: ")
                 
                 student_records[student][details_options[user_input]] = val
 
-
+            #To update details about existing subjects
             elif user_input in subject_options:
                 sub_update = subject_update()
 
+                #A dictionary to help choose the correct index corresponding
+                #to the correct subject in the student's record.
                 sub_corr = dict(enumerate(
                                 student_records[student]["GRADES"], 3
                                     )
                                 )
 
+                #Delete the existing record
                 del (student_records[student]["GRADES"]
                                     [sub_corr[int(user_input)]])
 
+                #Add the new record
                 student_records[student]["GRADES"].update(sub_update)
 
-
+            #Update the json records
             with open("./misc/student_records.json", "w") as records_json:
                 dump(student_records, records_json, indent=4)
 
@@ -59,27 +68,39 @@ def update(student, student_records):
 
 
         elif user_input == "A":
-            mylist = [name.upper() for name in student_records[student]["GRADES"].keys()]
-            print(mylist)
+            #A list of existing subjects under a student's name to help
+            #check for duplicates
+            sub_list = [name.upper() for name in student_records[student][
+                "GRADES"].keys()]
+                
             new_sub = subject_update()
 
             for key in new_sub:
-                if key.upper() in mylist:
+                if key.upper() in sub_list:
                     print("ERROR: Subject already exists")
                     sleep(2)
-                    break
             
                 else:
+                    #Update local records
                     student_records[student]["GRADES"].update(new_sub)
+
+                    #Update json records
+                    with (open("./misc/student_records.json", "w") 
+                          as records_json):
+                        dump(student_records, records_json, indent=4)
 
                     clear()
 
                     print("UPDATED SUCCESSFULLY")
 
                     sleep(1.5)
+                
+                break
 
-
+        
+        #To delete a subject
         elif len(user_input) > 1 and user_input[0] == "D":
+            #A dictionary to help index subjects that a student has taken
             sub_corr = dict(zip([f"{num}" for num in range(
                                     3, 
                                     len(student_records[student]["GRADES"]) + 3
@@ -89,14 +110,18 @@ def update(student, student_records):
                                 )
                             )
 
+            #If the user entered a valid index that
+            #refers to a certain subject.
             if user_input[1:] in sub_corr:
                 cnfm = input("Enter Y to confirm deletion: ").upper()
                 
                 if cnfm == "Y":
+                    #Delete local records
                     del student_records[student]["GRADES"][
                         sub_corr[user_input[1:]]
                         ]
 
+                    #Update json records
                     with (open("./misc/student_records.json", "w") 
                           as records_json):
                         dump(student_records, records_json, indent=4)
@@ -113,27 +138,47 @@ def update(student, student_records):
             else:
                 error = True
 
-
+        #To exit the program loop
         elif user_input == "Q":
             open_update = False
 
         else:
             error = True
 
+    #Update local records in student_details
     return student_records
 
 
 def list_fields(student, student_records):
+    '''
+    A function to streamline printing the menu & options.
+    student_records is passed into function for efficiency,
+    rather than reading the json file every time the menu is opened.
+    '''
     print(f"1 - NAME: {student_records[student]["NAME"]}",
           f"\n2 - ID: {student_records[student]["ID"]}",
           "\n\nGRADES:")
 
     menu_counter = 3
+    column_1 = True
+
+    #A loop for printing two columns of information dynamically
     for subject in student_records[student]["GRADES"]:
-        print(f"{menu_counter} - {subject}:",
-              f"{student_records[student]["GRADES"][subject]}")
+        row = (f"{menu_counter} - {subject}: " + 
+               f"{student_records[student]["GRADES"][subject]}")
+
+        if column_1:
+            print(f"{row:30}", end="")
+
+        else:
+            print(f"{row:30}")
 
         menu_counter += 1
+        column_1 = not column_1
+
+    #For cleaner presentation of the menu
+    if not column_1:
+        print()
 
     print("\nA - Add subject",
           "\nQ - Return to student details",
@@ -142,8 +187,13 @@ def list_fields(student, student_records):
 
 
 def subject_update():
+    '''
+    A function to streamline gathering user input for updating existing or
+    add new subjects to a student.
+    '''
     sub = input("\nEnter subject name: ")
 
+    #Input validation.
     while True:
         try:
             mark = float(input(f"Enter {sub} grade: "))

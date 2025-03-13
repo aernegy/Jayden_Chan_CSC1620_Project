@@ -4,16 +4,8 @@
         "ID": "0029527",
         "GRADES": {
             "Mathematics": 100.0,
-            "Macroeconomics": 75.0
-        }
-    },
-    {
-        "NAME": "Ava Liam Peterson",
-        "ID": "0038462",
-        "GRADES": {
-            "Biology": 88.0,
-            "Physics": 92.0,
-            "Chemistry": 85.0
+            "Macroeconomics": 75.0,
+            "Physics": 98.0
         }
     },
     {
@@ -199,6 +191,13 @@
         "GRADES": {
             "Literature": 100.0,
             "Add Math": 50.0
+        }
+    },
+    {
+        "NAME": "Zuri",
+        "ID": "00293845",
+        "GRADES": {
+            "Computer Science": 89.0
         }
     }
 ]

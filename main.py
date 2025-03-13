@@ -11,8 +11,6 @@ def main():
           as error_message):
         error_message = error_message.read()
 
-    clear()
-
     main_menu_options = {"1": view, 
                          "2": search
                          }
@@ -20,10 +18,12 @@ def main():
     open_main = True
     error = False
 
+    #Main menu always printed unless a valid option is entered
     while open_main:
         clear()
         print(main_menu)
-
+        
+        #Only triggered if user entered invalid input
         if error:
             print(error_message)
             error = False
@@ -32,9 +32,8 @@ def main():
 
         if user_input in main_menu_options:
             main_menu_options[user_input]()
-            clear()
-            print(main_menu)
 
+        #To exit the program loop
         elif user_input == "Q":
             open_main = False
             clear()
