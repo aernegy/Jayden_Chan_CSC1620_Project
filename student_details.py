@@ -1,13 +1,9 @@
-from json import load
 from misc.clear import clear
 from update import update
 from delete import delete
 
 
-def student_details(student, student_records):
-    with open("./misc/menu_error.txt") as error_message:
-        error_message = error_message.read()
-
+def student_details(student, student_records, error_message):
     open_details = True
     error = False
 
@@ -45,9 +41,10 @@ def student_details(student, student_records):
         #Pass local records to function as well as the student's index
         #in the local records and json array.
         if user_input in details_menu_options:
-            student_records = details_menu_options[user_input](student, 
-                                                               student_records
-                                                               )
+            student_records = details_menu_options[user_input](
+                student, 
+                student_records, error_message
+                )
 
             #Stops the program from trying to reopen student details
             #menu when user tries deleting the record, to prevent errors

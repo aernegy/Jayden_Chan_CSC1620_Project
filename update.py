@@ -1,12 +1,8 @@
-from json import dump, load
 from time import sleep
 from misc.clear import clear
 
 
-def update(student, student_records):
-    with open("./misc/menu_error.txt") as error_message:
-        error_message = error_message.read()
-    
+def update(student, student_records, error_message):    
     open_update = True
     error = False
 
@@ -56,10 +52,6 @@ def update(student, student_records):
                 #Add the new record
                 student_records[student]["GRADES"].update(sub_update)
 
-            #Update the json records
-            with open("./misc/student_records.json", "w") as records_json:
-                dump(student_records, records_json, indent=4)
-
             clear()
 
             print("UPDATED SUCCESSFULLY")
@@ -83,11 +75,6 @@ def update(student, student_records):
                 else:
                     #Update local records
                     student_records[student]["GRADES"].update(new_sub)
-
-                    #Update json records
-                    with (open("./misc/student_records.json", "w") 
-                          as records_json):
-                        dump(student_records, records_json, indent=4)
 
                     clear()
 
@@ -120,11 +107,6 @@ def update(student, student_records):
                     del student_records[student]["GRADES"][
                         sub_corr[user_input[1:]]
                         ]
-
-                    #Update json records
-                    with (open("./misc/student_records.json", "w") 
-                          as records_json):
-                        dump(student_records, records_json, indent=4)
 
                     print("DELETED SUCCESSFULLY")
 

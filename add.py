@@ -1,6 +1,5 @@
 from misc.clear import clear
 from time import sleep
-from json import dump, load
 
 
 def add(student_records):
@@ -44,13 +43,9 @@ def add(student_records):
     grades = dict(zip(subjects, marks))
     new_student = {"NAME": name, "ID": id, "GRADES": grades}
 
-    #Update the local records
+    #Update the records
     student_records.append(new_student)
 
-    #Update the json records
-    with open("./misc/student_records.json", "w") as records_json:
-        dump(student_records, records_json, indent=4)
-            
 
     clear()
 

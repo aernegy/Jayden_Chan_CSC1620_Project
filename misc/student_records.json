@@ -13,7 +13,8 @@
         "ID": "0012457",
         "GRADES": {
             "History": 82.0,
-            "Literature": 74.0
+            "Literature": 74.0,
+            "Mathematics": 78.0
         }
     },
     {
@@ -191,13 +192,6 @@
         "GRADES": {
             "Literature": 100.0,
             "Add Math": 50.0
-        }
-    },
-    {
-        "NAME": "Zuri",
-        "ID": "00293845",
-        "GRADES": {
-            "Computer Science": 89.0
         }
     }
 ]

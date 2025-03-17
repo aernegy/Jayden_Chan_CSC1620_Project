@@ -1,15 +1,9 @@
-from json import load
 from misc.clear import clear
 from student_details import student_details
 from time import sleep
 
 
-def search():
-    #'Cache' local record of student records
-    with (open("./misc/student_records.json", "r+") 
-          as records_json):
-        student_records = load(records_json)
-
+def search(student_records, error_message):
     clear()
 
     print("STUDENT RECORDS SEARCH",
@@ -41,14 +35,8 @@ def search():
         print("NO RESULTS")
         sleep(1.5)
 
-        return
+        return student_records
         
-
-    ##Below is a menu to display the search results. Opens only when
-    ##there are search results.
-    with (open("./misc/menu_error.txt") 
-          as error_message):
-        error_message = error_message.read()
 
     open_results = True
     error = False
@@ -68,9 +56,11 @@ def search():
         #When the user enters a valid input to view a student,
         #open that student's details in the student_details menu.
         if user_input in student_options:
-            student_records = student_details(idx[int(user_input) - 1], 
-                                                student_records
-                                                )
+            student_records = student_details(
+                idx[int(user_input) - 1], 
+                student_records, 
+                error_message
+                )
 
         #To exit the search menu
         elif user_input == "Q":
@@ -78,6 +68,8 @@ def search():
 
         else:
             error = True
+
+    return student_records
 
 
 

@@ -1,19 +1,9 @@
-from json import load
 from misc.clear import clear
 from add import add
 from student_details import student_details
 
 
-def view():
-    #Downloading a 'cache' of the student records
-    with (open("./misc/student_records.json", "r+") 
-          as records_json):
-        student_records = load(records_json)
-
-    with (open("./misc/menu_error.txt") 
-          as error_message):
-        error_message = error_message.read()
-
+def view(student_records, error_message):
     open_view = True
     error = False
 
@@ -36,9 +26,11 @@ def view():
         #The first parameter is to inform the function which student
         #the user wishes to view.
         if user_input in student_options:
-            student_records = student_details(int(user_input) - 1, 
-                                                student_records
-                                                )
+            student_records = student_details(
+                int(user_input) - 1, 
+                student_records,
+                error_message
+                )
                 
         elif user_input == "A":
             student_records = add(student_records)
@@ -49,6 +41,8 @@ def view():
 
         else:
             error = True
+
+    return student_records
 
 
 def list_records(student_records):
@@ -65,7 +59,7 @@ def list_records(student_records):
 
     #A loop for printing two columns of information dynamically
     for student in student_records:
-        row = str(student_no) + " - " + student_records[student_no - 1]["NAME"]
+        row = str(student_no) + " - " + student["NAME"]
 
         if column_1:
             print(f"{row:50}", end="")
