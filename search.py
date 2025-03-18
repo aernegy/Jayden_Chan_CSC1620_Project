@@ -4,6 +4,9 @@ from time import sleep
 
 
 def search(student_records, error_message):
+    '''
+    Handles the logic of searching for a student
+    '''
     clear()
 
     print("STUDENT RECORDS SEARCH",
@@ -29,46 +32,46 @@ def search(student_records, error_message):
             results.append(student)
             idx.append(student_records.index(student))
 
-    #If there are no results
-    if not results:
+    #If there are search results:
+    if results:
+        open_results = True
+        error = False
+
+        #To help validate user input when selecting a particular student
+        student_options = [f"{num}" for num in range(1, len(results) + 1)]
+
+        while open_results:
+            search_results(results)
+
+            if error:
+                print(error_message)
+                error = False
+
+            user_input = input("Choose an option: ").upper()
+
+            #When the user enters a valid input to view a student,
+            #open that student's details in the student_details menu.
+            if user_input in student_options:
+                student_records = student_details(
+                    idx[int(user_input) - 1], 
+                    student_records, 
+                    error_message
+                    )
+
+            #To exit the search menu
+            elif user_input == "Q":
+                open_results = False
+
+            else:
+                error = True
+
+    #If there are no search results:
+    else:
         clear()
         print("NO RESULTS")
         sleep(1.5)
 
-        return student_records
-        
-
-    open_results = True
-    error = False
-
-    #To help validate user input when selecting a particular student
-    student_options = [f"{num}" for num in range(1, len(results) + 1)]
-
-    while open_results:
-        search_results(results)
-
-        if error:
-            print(error_message)
-            error = False
-
-        user_input = input("Choose an option: ").upper()
-
-        #When the user enters a valid input to view a student,
-        #open that student's details in the student_details menu.
-        if user_input in student_options:
-            student_records = student_details(
-                idx[int(user_input) - 1], 
-                student_records, 
-                error_message
-                )
-
-        #To exit the search menu
-        elif user_input == "Q":
-            open_results = False
-
-        else:
-            error = True
-
+    #Update the local records
     return student_records
 
 

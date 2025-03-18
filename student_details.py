@@ -4,6 +4,9 @@ from delete import delete
 
 
 def student_details(student, student_records, error_message):
+    '''
+    Handles the logic of the student details menu, inlcuding input handling
+    '''
     open_details = True
     error = False
 
@@ -64,9 +67,7 @@ def student_details(student, student_records, error_message):
 
 def student_details_menu(student, student_records, grade):
     '''
-    A function to streamline printing the menu & options.
-    student_records is passed into function for efficiency,
-    rather than reading the json file every time the menu is opened.
+    A function for printing the menu & options.
     '''
     clear()
 

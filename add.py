@@ -3,6 +3,9 @@ from time import sleep
 
 
 def add(student_records):
+    '''
+    Handles adding students
+    '''
     clear()
 
     name = input("Enter student name: ")
@@ -53,5 +56,5 @@ def add(student_records):
 
     sleep(2)
 
-    #Update the local records in view.py
+    #Return the update records to view.py
     return student_records

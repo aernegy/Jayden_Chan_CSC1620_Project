@@ -2,7 +2,10 @@ from time import sleep
 from misc.clear import clear
 
 
-def update(student, student_records, error_message):    
+def update(student, student_records, error_message):
+    '''
+    A function to handle the logic of updating student records
+    '''    
     open_update = True
     error = False
 
@@ -133,9 +136,7 @@ def update(student, student_records, error_message):
 
 def list_fields(student, student_records):
     '''
-    A function to streamline printing the menu & options.
-    student_records is passed into function for efficiency,
-    rather than reading the json file every time the menu is opened.
+    A function for printing the menu & options.
     '''
     print(f"1 - NAME: {student_records[student]["NAME"]}",
           f"\n2 - ID: {student_records[student]["ID"]}",

@@ -2,6 +2,9 @@ from time import sleep
 
 
 def delete(student, student_records, *error_message):
+    '''
+    Handles the logic of deleting a student
+    '''
     user_input = input("Enter Y to confirm deletion: ").upper()
 
     if user_input == "Y":

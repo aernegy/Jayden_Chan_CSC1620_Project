@@ -4,6 +4,9 @@ from student_details import student_details
 
 
 def view(student_records, error_message):
+    '''
+    A function to handle the logic of viewing all records
+    '''
     open_view = True
     error = False
 
