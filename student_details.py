@@ -79,7 +79,7 @@ def student_details_menu(student, student_records, grade):
 
     #A loop for printing two columns of information dynamically
     for subject in student_records[student]["GRADES"]:
-        row = f"{subject}: {student_records[student]["GRADES"][subject]}"
+        row = f"{subject}: {student_records[student]['GRADES'][subject]}"
 
         if column_1:
             print(f"{row:30}", end="")
