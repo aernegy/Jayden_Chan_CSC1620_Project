@@ -1,11 +1,9 @@
 from json import load, dump
+from os.path import dirname
+from contextlib import chdir
 from view import view
 from search import search
 from misc.clear import clear
-
-
-from os.path import dirname
-from contextlib import chdir
 
 
 def main():
