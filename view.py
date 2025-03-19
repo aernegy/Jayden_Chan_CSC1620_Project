@@ -29,7 +29,7 @@ def view(student_records, error_message):
         #The first parameter is to inform the function which student
         #the user wishes to view.
         if user_input in student_options:
-            student_records = student_details(
+            student_details(
                 int(user_input) - 1, 
                 student_records,
                 error_message
@@ -44,8 +44,6 @@ def view(student_records, error_message):
 
         else:
             error = True
-
-    return student_records
 
 
 def list_records(student_records):

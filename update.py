@@ -130,9 +130,6 @@ def update(student, student_records, error_message):
         else:
             error = True
 
-    #Update local records in student_details
-    return student_records
-
 
 def list_fields(student, student_records):
     '''

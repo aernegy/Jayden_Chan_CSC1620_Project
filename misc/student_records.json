@@ -89,7 +89,8 @@
         "ID": "0129876",
         "GRADES": {
             "Physics": 76.0,
-            "Mathematics": 88.0
+            "Mathematics": 88.0,
+            "Literature": 100.0
         }
     },
     {
@@ -184,14 +185,6 @@
         "GRADES": {
             "History": 86.0,
             "Chemistry": 92.0
-        }
-    },
-    {
-        "NAME": "Daniel Noah Carter",
-        "ID": "0251932",
-        "GRADES": {
-            "Literature": 100.0,
-            "Add Math": 50.0
         }
     }
 ]

@@ -43,7 +43,7 @@ def main():
                 user_input = input("Choose an option: ").upper()
 
                 if user_input in main_menu_options:
-                    student_records = main_menu_options[user_input](
+                    main_menu_options[user_input](
                         student_records, 
                         error_message
                         )

@@ -52,7 +52,7 @@ def search(student_records, error_message):
             #When the user enters a valid input to view a student,
             #open that student's details in the student_details menu.
             if user_input in student_options:
-                student_records = student_details(
+                student_details(
                     idx[int(user_input) - 1], 
                     student_records, 
                     error_message
@@ -70,10 +70,6 @@ def search(student_records, error_message):
         clear()
         print("NO RESULTS")
         sleep(1.5)
-
-    #Update the local records
-    return student_records
-
 
 
 def search_results(results):

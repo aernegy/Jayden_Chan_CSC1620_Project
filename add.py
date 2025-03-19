@@ -55,6 +55,3 @@ def add(student_records):
     print("STUDENT ADDED!")
 
     sleep(2)
-
-    #Return the update records to view.py
-    return student_records

@@ -19,6 +19,3 @@ def delete(student, student_records, *error_message):
         print("DELETION CANCELLED!")
 
         sleep(2)
-
-    #Update the local record in student_details.py
-    return student_records

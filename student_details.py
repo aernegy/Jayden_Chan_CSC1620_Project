@@ -44,9 +44,10 @@ def student_details(student, student_records, error_message):
         #Pass local records to function as well as the student's index
         #in the local records and json array.
         if user_input in details_menu_options:
-            student_records = details_menu_options[user_input](
+            details_menu_options[user_input](
                 student, 
-                student_records, error_message
+                student_records, 
+                error_message
                 )
 
             #Stops the program from trying to reopen student details
@@ -61,8 +62,6 @@ def student_details(student, student_records, error_message):
 
         else:
             error = True
-
-    return student_records
 
 
 def student_details_menu(student, student_records, grade):
