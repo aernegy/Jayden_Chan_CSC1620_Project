@@ -135,7 +135,7 @@ def list_fields(student, student_records):
     '''
     A function for printing the menu & options.
     '''
-    print(f"1 - NAME: {student_records[student]["NAME"]}",
+    print(f"1 - NAME: {student_records[student]['NAME']}",
           f"\n2 - ID: {student_records[student]["ID"]}",
           "\n\nGRADES:")
 
